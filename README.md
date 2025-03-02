@@ -1,15 +1,12 @@
-====================================================================
-                         rails_setup
-====================================================================
+rails_setup
 
 A Ruby on Rails application configured with MySQL for database management,
 Devise for authentication, Cancancan for authorization, and Bootstrap for
 responsive design. This project provides a quick and robust starting point
 for developing modern web applications.
 
-====================================================================
-                         TABLE OF CONTENTS
-====================================================================
+TABLE OF CONTENTS
+-----------------
 1. Overview
 2. Features
 3. Prerequisites
@@ -18,9 +15,8 @@ for developing modern web applications.
 6. Contributing
 7. License
 
-====================================================================
 1. OVERVIEW
---------------------------------------------------------------------
+-----------
 rails_setup is a Rails project designed to offer a solid foundation for
 web applications with the following integrations:
 
@@ -33,17 +29,15 @@ The configuration sets the Devise sign‑in page as the home page and pre-
 configures the application layout to load Bootstrap, allowing for rapid UI
 customization.
 
-====================================================================
 2. FEATURES
---------------------------------------------------------------------
+-----------
 • User Authentication: Secure registration and login capabilities using Devise.
 • User Authorization: Role-based access control managed with Cancancan.
 • Responsive Design: Out-of-the-box styling with Bootstrap.
 • MySQL Integration: Robust and scalable database management.
 
-====================================================================
 3. PREREQUISITES
---------------------------------------------------------------------
+----------------
 Before getting started, ensure you have the following installed on your system:
 
   - Homebrew           (https://brew.sh/)
@@ -52,33 +46,27 @@ Before getting started, ensure you have the following installed on your system:
   - Rails              (https://rubyonrails.org/)
   - Bundler            (https://bundler.io/)
 
-====================================================================
 4. INSTALLATION
---------------------------------------------------------------------
+---------------
 Step 1: Start the MySQL Service
---------------------------------
   Open your terminal and run:
     brew services start mysql
 
 Step 2: Create a New Rails Application with MySQL
---------------------------------------------------
   Run the following commands:
     rails new rails_setup --database=mysql
     cd rails_setup
 
 Step 3: Install Dependencies
-----------------------------
   In your project directory, run:
     bundle install
 
 Step 4: Install Cancancan for Authorization
--------------------------------------------
   Run these commands:
     bundle add cancancan
     rails generate cancan:ability
 
 Step 5: Install Devise for Authentication
------------------------------------------
   Execute:
     bundle add devise
     rails generate devise:install
@@ -86,7 +74,6 @@ Step 5: Install Devise for Authentication
     rails db:migrate
 
 Step 6: Configure Rails Routes
-------------------------------
   Replace the content of "config/routes.rb" with the following:
 
     Rails.application.routes.draw do
@@ -97,7 +84,6 @@ Step 6: Configure Rails Routes
     end
 
 Step 7: Update the Application Layout to Include Bootstrap
------------------------------------------------------------
   Replace the content of "app/views/layouts/application.html.erb" with:
 
     <!DOCTYPE html>
@@ -126,18 +112,15 @@ Step 7: Update the Application Layout to Include Bootstrap
     </html>
 
 Step 8: Generate Devise Views for Customization with Bootstrap
----------------------------------------------------------------
   Run:
     rails generate devise:views
 
 Step 9: Start the Rails Server
-------------------------------
   Finally, run:
     rails s
 
-====================================================================
 5. USAGE
---------------------------------------------------------------------
+--------
 After completing the installation steps, start the Rails server and open
 your web browser to visit:
   http://localhost:3000
@@ -145,9 +128,8 @@ your web browser to visit:
 The homepage is set to the Devise sign‑in page, where you can register a new
 account or log in if you already have one.
 
-====================================================================
 6. CONTRIBUTING
---------------------------------------------------------------------
+---------------
 Contributions to rails_setup are welcome!
 
 If you find a bug or have a feature request, please open an issue or submit
@@ -161,12 +143,9 @@ To contribute:
   4. Push your branch (e.g., git push origin feature/YourFeature).
   5. Open a pull request describing your changes.
 
-====================================================================
 7. LICENSE
---------------------------------------------------------------------
+----------
 This project is licensed under the MIT License.
 See the LICENSE file for details.
 
-====================================================================
-                           END OF README
-====================================================================
+END OF README
